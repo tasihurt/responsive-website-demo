@@ -1,0 +1,86 @@
+/*
+    Container and multi-column layout
+*/
+
+.container {
+    margin: 10px 4%;
+}
+.row {
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+}
+.container::after, .row::after {
+    clear: both;
+    display: table;
+    content: "";
+}
+.col {
+    float: left;
+    display: block;
+}
+.col:last-child {
+    margin: 0;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+.col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    width: 100%;
+    float: left;
+    display: block;
+}
+.col img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    body {
+        color: #6c42d6;
+    }
+    .container {
+        width: 750px;
+        margin: 15px auto;
+    }
+    .col-2 {
+        margin-right: 2.35765%;
+        width: 14.70196%;
+    }
+    .col-3 {
+        margin-right: 2.35765%;
+        width: 23.23176%;
+    }
+    .col-4 {
+        margin-right: 2.35765%;
+        width: 31.76157%;
+    }
+    .col-6 {
+        margin-right: 2.35765%;
+        width: 48.82117%;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        color: #42d6d6;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .container {
+        width: 960px;
+        margin: 20px auto 5px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        color: #d642a4;
+    }
+    .container {
+        width: 1000px;
+        margin: 40px auto 10px;
+    }
+    h1 {
+        font-size: 3.75em;
+        font-weight: 200;
+    }
+}
